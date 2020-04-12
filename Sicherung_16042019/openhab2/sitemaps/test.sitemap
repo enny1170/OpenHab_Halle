@@ -1,0 +1,15 @@
+sitemap test label="test"
+{
+	Frame label="Halle"
+	{
+		Group item=Y_Main_Zone_G label="Receiver Main"
+	}
+	Switch      item=Yamaha_Playback  mappings=["Previous"="⏮", "Play"="►", "Pause"="⏸", "Stop"="⏹", "Next"="⏭"]    visibility=[Yamaha_Input=="USB"]
+	Text        item=Y_Main_Station                                                                                    visibility=[Yamaha_Input=="TUNER"]
+	Text        item=Y_Main_Artist
+	Text        item=Y_Main_Album
+	Text        item=Y_Main_Title
+	Image       item=Y_Main_TrackImage                                                                                 visibility=[Yamaha_Input=="USB"]
+
+
+}

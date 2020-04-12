@@ -1,0 +1,20 @@
+Bridge mqtt:broker:mosquitto "Misquitto" [host="127.0.0.1",secure=false, clientID="openHAB2"]
+{
+    //fill in your Mqtt Devices here
+    Thing topic gw2 "Mysensors MQTT Gateway" @ "Halle"
+	{
+	Channels:
+		Type switch : led "LED-Leiste" [stateTopic="gw2-out/18/1/1/0/2", commandTopic="gw2-in/18/1/1/0/2", transformationPattern="map:binary.map"]
+		Type switch : dmx "DMX-System" [stateTopic="gw2-out/18/2/1/0/2", commandTopic="gw2-in/18/2/1/0/2", transformationPattern="map:binary.map"]
+		Type number : h_humidity "Luftfeuchte" [stateTopic="gw2-out/18/4/1/0/1"]
+		Type number : h_temperature "Temperatur" [stateTopic="gw2-out/18/3/1/0/0"]
+		Type switch : revo "Revo" [stateTopic="gw2-out/17/1/1/0/2", commandTopic="gw2-in/17/1/1/0/2", transformationPattern="map:binary.map"]
+		Type switch : dart_red "Dart rot" [stateTopic="gw2-out/16/3/1/0/2", commandTopic="gw2-in/16/3/1/0/2", transformationPattern="map:binary.map"]
+		Type switch : dart_green "Dart grün" [stateTopic="gw2-out/16/4/1/0/2", commandTopic="gw2-in/16/4/1/0/2", transformationPattern="map:binary.map"]
+		Type switch : dart_blue "Dart blau" [stateTopic="gw2-out/16/5/1/0/2", commandTopic="gw2-in/16/5/1/0/2", transformationPattern="map:binary.map"]
+		Type number : l_humidity "Luftfeuchte" [stateTopic="gw2-out/15/2/1/0/1"]
+		Type number : l_temperature "Temperatur" [stateTopic="gw2-out/15/1/1/0/0"]
+		Type number : l_lightlevel "Helligkeit" [stateTopic="gw2-out/15/1/1/0/1"]
+	}
+
+}

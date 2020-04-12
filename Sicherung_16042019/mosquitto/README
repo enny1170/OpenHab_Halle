@@ -1,0 +1,5 @@
+Create a mosquitto user/password: the command below will create a user owntracks, you can change
+
+mosquitto_passwd -c /etc/mosquitto/pwfile owntracks
+
+you will be prompted to enter a password.

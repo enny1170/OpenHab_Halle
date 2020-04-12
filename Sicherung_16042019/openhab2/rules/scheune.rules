@@ -1,0 +1,51 @@
+/* ############################################################################ */
+/* Initialisierung */
+/* ############################################################################ */
+
+rule "Init virtual Items"
+when
+	System started
+then
+	if (L_TempSetpoint.state == Uninitialized) {
+		L_TempSetpoint.postUpdate(22)
+	}
+    if(L_Heater.state == Uninitialized) {
+        L_Heater.postUpdate(OFF)
+    }
+    if(L_heater_switch1.state == Uninitialized) {
+        L_heater_switch1.postUpdate(OFF)
+    }
+    if(L_heater_switch2.state == Uninitialized) {
+        L_heater_switch2.postUpdate(OFF)
+    }
+end
+
+/* ############################################################################ */
+/* Heizung */
+/* ############################################################################ */
+
+rule "IRHeater On Off"
+when
+    Item L_Heater changed 
+then
+    if (L_Heater.state == ON ) {
+        if(L_temperature.state < (L_TempSetpoint.state)) {
+            IrHeater.sendCommand(ON)
+        }
+    }
+    if (L_Heater.state == OFF) {
+        IrHeater.sendCommand(OFF)
+    }
+end
+
+rule "IRHeater TeperatureSet changed"
+when
+    Item L_TempSetpoint changed or Item L_temperature changed
+then
+    if (L_Heater.state == ON && L_temperature.state < L_TempSetpoint.state ) {
+                IrHeater.sendCommand(ON)
+    }
+    if (L_Heater.state == ON && L_temperature.state > L_TempSetpoint.state ) {
+                IrHeater.sendCommand(OFF)
+    }
+end
