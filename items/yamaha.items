@@ -1,0 +1,18 @@
+Switch Yamaha_Power "Power [%s]" <switch> (gAll) { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#power" }
+Dimmer Yamaha_Volume          "Volume [%.1f %%]"     <soundvolume>        { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#volume" }
+Switch Yamaha_Mute            "Mute [%s]"            <soundvolume_mute>   { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#mute" }
+String Yamaha_Input           "Input [%s]"           <video>              { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#input" }
+String Yamaha_Surround        "Surround [%s]"        <video>              { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#surroundProgram" }
+String Yamaha_Scene           "Scene []"             <video>              { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#scene" }
+Switch Yamaha_Dialogue_Level  "Dialogue Level [%d]"  <soundvolume>        { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#dialogueLevel" }
+
+Switch Yamaha_PartyMode       "Party mode [%s]"           <switch>             { channel="yamahareceiver:yamahaAV:5f9ec1b3_ed59_1900_4530_00a0dea275e4:party_mode" }
+Switch Yamaha_PartyModeMute   "Party mode mute [%s]"      <soundvolume_mute>   { channel="yamahareceiver:yamahaAV:5f9ec1b3_ed59_1900_4530_00a0dea275e4:party_mode_mute" }
+Dimmer Yamaha_PartyModeVolume "Party mode volume []"      <soundvolume>        { channel="yamahareceiver:yamahaAV:5f9ec1b3_ed59_1900_4530_00a0dea275e4:party_mode_volume" }
+
+String Yamaha_Playback             "[]"            <video> { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:playback_channels#playback" }
+String Yamaha_Playback_Station     "Station [%s]"  <video> { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:playback_channels#playback_station" }
+String Yamaha_Playback_Artist      "Artist [%s]"   <video> { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:playback_channels#playback_artist" }
+String Yamaha_Playback_Album       "Album [%s]"    <video> { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:playback_channels#playback_album" }
+String Yamaha_Playback_Song        "Song [%s]"     <video> { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:playback_channels#playback_song" }
+String Yamaha_Playback_Song_Image  "[]"            <video> { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:playback_channels#playback_song_image_url" }

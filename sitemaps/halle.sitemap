@@ -1,9 +1,42 @@
 sitemap halle label="Scheune"
 {
+	Frame label="Main"
+	{
+		Switch item=gAll mappings=[OFF="All Off", ON="All On"]
+		Switch item=gLights 
+		Switch item=Yamaha_Power label="Receiver"
+		Switch item=L_Heater
+		Text label="Receiver" icon=mediacontrol
+		{
+			Switch item=Yamaha_Power
+			Switch item=Yamaha_Mute
+			Switch item=Yamaha_Volume mappings=[DECREASE="-", INCREASE="+"]
+			Selection item=Yamaha_Input            mappings=[HDMI1="HDMI1",HDMI2="HDMI2",AUDIO1="AUDIO1",TUNER="TUNER",Spotify="Spotify",Bluetooth="Bluetooth","NET RADIO"="NetRadio",SERVER="Server",Straight="Straight"]
+
+			Switch item=Yamaha_Playback            mappings=["Previous"="⏮", "Play"="►", "Pause"="⏸", "Stop"="⏹", "Next"="⏭"]    visibility=[Yamaha_Input=="Spotify", Yamaha_Input=="NET RADIO", Yamaha_Input=="Bluetooth",Yamaha_Input=="USB"]
+			Text   item=Yamaha_Playback_Station    visibility=[Yamaha_Input=="TUNER", Yamaha_Input=="NET RADIO"]
+			Text   item=Yamaha_Playback_Artist
+			Text   item=Yamaha_Playback_Album
+			Text   item=Yamaha_Playback_Song
+			Image  item=Yamaha_Playback_Song_Image visibility=[Yamaha_Input=="Spotify", Yamaha_Input=="NET RADIO", Yamaha_Input=="Bluetooth"]		
+		}
+		Text label="Data" icon=line
+		{
+			Text item=H_H_temperature
+			Text item=H_H_humidity
+			Text item=L_temperature
+			Text item=L_humidity
+			Chart item=Temperature refresh=300 period=d legend=true
+			Chart item=Humidity refresh=300 period=d legend=true
+		}
+	}
+
 	Frame label="Lounge"
 	{
 		Text item=L_temperature
 		Text item=L_humidity
+		Text item=H_H_temperature
+		Text item=H_H_humidity
 		Switch item=L_Heater
 		Setpoint item=L_TempSetpoint minValue=16 maxValue=28 step=0.5
 		Group item=IrHeater label="Heizkörper" icon=radiator
@@ -12,7 +45,6 @@ sitemap halle label="Scheune"
 			Chart item=L_temperature refresh=300 period=d legend=true
 			Chart item=L_humidity refresh=300 period=d legend=true
 		}
-		Group item=Receiver
 		
 	}
 		Frame label="Halle"{

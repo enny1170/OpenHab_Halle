@@ -1,17 +1,25 @@
-Group Lounge 
+Group Lounge (Global)
 Group IrHeater
-Group Hall
-Group:Switch:OR(On,OFF) gDart_Light "Dart [(%d)]" <light> 
-Number L_humidity "Luftfeuchte [%.1f %%]" <humidity> (Lounge) {channel="mqtt:topic:mosquitto:gw2:l_humidity"} 
-Number L_temperature "Temperatur [%.1f °C]" <temperature> (Lounge) {channel="mqtt:topic:mosquitto:gw2:l_temperature"} 
+Group Hall (Global)
+Group Temperature (Global)
+Group Humidity (Global)
+Group Global
+Group Data (Global)
+Group Lights (Global)
+
+Group:Switch:OR(ON,OFF) gAll "Alles [(%d)]" (Global)
+Group:Switch:OR(ON,OFF) gLights "Licht [(%d)]" <light> (Global)
+Group:Switch:OR(ON,OFF) gDart_Light "Dart [(%d)]" <light> (Global)
+Number L_humidity "Luftfeuchte Lounge [%.1f %%]" <humidity> (Lounge,Humidity,Data) {channel="mqtt:topic:mosquitto:gw2:l_humidity"} 
+Number L_temperature "Temperatur Lounge [%.1f °C]" <temperature> (Lounge,Temperature,Data) {channel="mqtt:topic:mosquitto:gw2:l_temperature"} 
 Number L_lightlevel "Helligkeit [%.1f %%]" <lightlevel> (Lounge){channel="mqtt:topic:mosquitto:gw2:l_lightlevel"} 
 
-Switch H_arduino_switch "LED-Leiste" <light> (Hall) {channel="mqtt:topic:mosquitto:gw2:led"}
-Switch H_dmx_switch "DMX-System" <light> (Hall) {channel="mqtt:topic:mosquitto:gw2:dmx"}
-Number H_H_humidity "Luftfeuchte [%.1f %%]" <humidity> (Hall) {channel="mqtt:topic:mosquitto:gw2:h_humidity"}
-Number H_H_temperature "Temperatur [%.1f °C]" <temperature> (Hall) {channel="mqtt:topic:mosquitto:gw2:h_temperature"}
-Switch H_revo_switch "Revo" <light> {channel="mqtt:topic:mosquitto:gw2:revo"}
-Switch H_Dart_red "Dart rot" <light> (gDart_Light,Hall) {channel="mqtt:topic:mosquitto:gw2:dart_red"}
-Switch H_Dart_green "Dart grün" <light> (gDart_Light,Hall) {channel="mqtt:topic:mosquitto:gw2:dart_green"}
-Switch H_Dart_blue "Dart blau" <light> (gDart_Light,Hall) {channel="mqtt:topic:mosquitto:gw2:dart_blue"}
+Switch H_arduino_switch "LED-Leiste" <light> (Hall,Lights,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:led"}
+Switch H_dmx_switch "DMX-System" <light> (Hall,Lights,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:dmx"}
+Number H_H_humidity "Luftfeuchte Halle [%.1f %%]" <humidity> (Hall,Humidity,Data) {channel="mqtt:topic:mosquitto:gw2:h_humidity"}
+Number H_H_temperature "Temperatur Halle [%.1f °C]" <temperature> (Hall,Temperature,Data) {channel="mqtt:topic:mosquitto:gw2:h_temperature"}
+Switch H_revo_switch "Revo" <light> (Hall,Lights,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:revo"}
+Switch H_Dart_red "Dart rot" <light> (gDart_Light,Hall,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:dart_red"}
+Switch H_Dart_green "Dart grün" <light> (gDart_Light,Hall,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:dart_green"}
+Switch H_Dart_blue "Dart blau" <light> (gDart_Light,Hall,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:dart_blue"}
 

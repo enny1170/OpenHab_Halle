@@ -1,0 +1,4 @@
+Bridge yamahareceiver:yamahaAV:5f9ec1b3_ed59_1900_4530_00a0dea275e4 "RX-V675" [host="RX-V675-A275E4.fritz.box", refreshInterval=20] {
+    Thing zone Main_Zone "Main Zone" @ "Halle" [zone="Main_Zone", volumeDbMin=-81, volumeDbMax=12]
+    Thing zone ZoneID2 "Zone 2 " @ "Halle" [zone="Zone_2"]
+}
