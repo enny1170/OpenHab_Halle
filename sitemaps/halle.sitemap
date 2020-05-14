@@ -4,11 +4,12 @@ sitemap halle label="Scheune"
 	{
 		Switch item=gAll mappings=[OFF="All Off", ON="All On"]
 		Switch item=gLights 
-		Switch item=Yamaha_Power label="Receiver"
+		Switch item=gRecPower label="Receiver"
 		Switch item=L_Heater
 		Text label="Receiver" icon=mediacontrol
 		{
 			Switch item=Yamaha_Power
+			Switch item=H_DJ_power label="Bass"
 			Switch item=Yamaha_Mute
 			Switch item=Yamaha_Volume mappings=[DECREASE="-", INCREASE="+"]
 			Selection item=Yamaha_Input            mappings=[HDMI1="HDMI1",HDMI2="HDMI2",AUDIO1="AUDIO1",TUNER="TUNER",Spotify="Spotify",Bluetooth="Bluetooth","NET RADIO"="NetRadio",SERVER="Server",Straight="Straight"]

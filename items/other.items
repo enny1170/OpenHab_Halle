@@ -1,5 +1,5 @@
 /* Virtual Items */
-Group Receiver
+
 Number L_TempSetpoint "Soll Temp. [%.1f °C]" <heating> (Lounge)
 Switch L_Heater "Heizung" <heating> (gAll,Lounge)
 /*

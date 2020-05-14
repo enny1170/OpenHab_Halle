@@ -1,4 +1,4 @@
-Switch Yamaha_Power "Power [%s]" <switch> (gAll) { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#power" }
+Switch Yamaha_Power "Power [%s]" <switch> (gAll,gRecPower) { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#power" }
 Dimmer Yamaha_Volume          "Volume [%.1f %%]"     <soundvolume>        { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#volume" }
 Switch Yamaha_Mute            "Mute [%s]"            <soundvolume_mute>   { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#mute" }
 String Yamaha_Input           "Input [%s]"           <video>              { channel="yamahareceiver:zone:5f9ec1b3_ed59_1900_4530_00a0dea275e4:Main_Zone:zone_channels#input" }
