@@ -11,5 +11,8 @@ sitemap test label="test"
 	Text        item=Y_Main_Title
 	Image       item=Y_Main_TrackImage                                                                                 visibility=[Yamaha_Input=="USB"]
 
+	Switch item=L_heater_switch1
+	Switch item=L_heater_switch2
+	Switch item=gIrHeater
 
 }

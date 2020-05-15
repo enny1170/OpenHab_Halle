@@ -30,11 +30,11 @@ when
 then
     if (L_Heater.state == ON ) {
         if(L_temperature.state < (L_TempSetpoint.state)) {
-            IrHeater.sendCommand(ON)
+            gIrHeater.sendCommand(ON)
         }
     }
     if (L_Heater.state == OFF) {
-        IrHeater.sendCommand(OFF)
+        gIrHeater.sendCommand(OFF)
     }
 end
 
@@ -43,9 +43,9 @@ when
     Item L_TempSetpoint changed or Item L_temperature changed
 then
     if (L_Heater.state == ON && L_temperature.state < L_TempSetpoint.state ) {
-                IrHeater.sendCommand(ON)
+                gIrHeater.sendCommand(ON)
     }
     if (L_Heater.state == ON && L_temperature.state > L_TempSetpoint.state ) {
-                IrHeater.sendCommand(OFF)
+                gIrHeater.sendCommand(OFF)
     }
 end

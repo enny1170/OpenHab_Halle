@@ -16,6 +16,8 @@ Bridge mqtt:broker:mosquitto "Misquitto" [host="127.0.0.1",secure=false, clientI
 		Type number : l_temperature "Temperatur" [stateTopic="gw2-out/15/1/1/0/0"]
 		Type number : l_lightlevel "Helligkeit" [stateTopic="gw2-out/15/1/1/0/1"]
 		Type switch : h_dj_power "DJ-Pult" [stateTopic="ESP_3646250/state", commandTopic="ESP_3646250/cmd", transformationPattern="map:binary.map"]
+		Type switch : l_heater_switch1 "Heizung Sitzecke" [stateTopic="ESP_12018355/state", commandTopic="ESP_12018355/cmd", transformationPattern="map:binary.map"]
+		Type switch : l_heater_switch2 "Heizung Tür" [stateTopic="ESP_11616340/state", commandTopic="ESP_11616340/cmd", transformationPattern="map:binary.map"]
 	}
 
 }

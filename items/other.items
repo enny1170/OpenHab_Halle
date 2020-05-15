@@ -6,7 +6,7 @@ Switch L_Heater "Heizung" <heating> (gAll,Lounge)
 Switch L_heater_switch1 "Heizung 1" (IrHeater) {mqtt=">[localmqtt:gw2-in/16/1/1/0/3:command:ON:1],>[localmqtt:gw2-in/16/1/1/0/3:command:OFF:0],<[localmqtt:gw2-out/16/1/1/0/3:state:OFF:0],<[localmqtt:gw2-out/16/1/1/0/3:state:ON:1]"}
 Switch L_heater_switch2 "Heizung 2" (IrHeater) {mqtt=">[localmqtt:gw2-in/17/1/1/0/3:command:ON:1],>[localmqtt:gw2-in/17/1/1/0/3:command:OFF:0],<[localmqtt:gw2-out/17/1/1/0/3:state:OFF:0],<[localmqtt:gw2-out/17/1/1/0/3:state:ON:1]"}
 */
-Switch L_heater_switch1 "Heizung 1" <radiator> (IrHeater) { http=">[ON:GET:http://192.168.178.221/ButtonOn] >[OFF:GET:http://192.168.178.221/ButtonOff]"}
-Switch L_heater_switch2 "Heizung 2" <radiator> (IrHeater) { http=">[ON:GET:http://192.168.178.220/ButtonOn] >[OFF:GET:http://192.168.178.220/ButtonOff]"}
+// Switch L_heater_switch1 "Heizung 1" <radiator> (IrHeater) { http=">[ON:GET:http://192.168.178.221/ButtonOn] >[OFF:GET:http://192.168.178.221/ButtonOff]"}
+// Switch L_heater_switch2 "Heizung 2" <radiator> (IrHeater) { http=">[ON:GET:http://192.168.178.220/ButtonOn] >[OFF:GET:http://192.168.178.220/ButtonOff]"}
 
 

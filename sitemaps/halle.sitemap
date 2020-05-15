@@ -40,7 +40,11 @@ sitemap halle label="Scheune"
 		Text item=H_H_humidity
 		Switch item=L_Heater
 		Setpoint item=L_TempSetpoint minValue=16 maxValue=28 step=0.5
-		Group item=IrHeater label="Heizkörper" icon=radiator
+		Text item=IrHeater label="Heizkörper" icon=radiator
+		{
+			Switch item=L_heater_switch1 
+			Switch item=L_heater_switch2 
+		}
 		Text label="Verlauf"
 		{
 			Chart item=L_temperature refresh=300 period=d legend=true

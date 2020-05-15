@@ -1,5 +1,4 @@
 Group Lounge (Global)
-Group IrHeater
 Group Hall (Global)
 Group Temperature (Global)
 Group Humidity (Global)
@@ -7,6 +6,7 @@ Group Global
 Group Data (Global)
 Group Lights (Global)
 
+Group:Switch:OR(ON,OFF) gIrHeater "IR-Heizer [(%d)]" (Global)
 Group:Switch:OR(ON,OFF) gAll "Alles [(%d)]" (Global)
 Group:Switch:OR(ON,OFF) gLights "Licht [(%d)]" <light> (Global)
 Group:Switch:OR(ON,OFF) gDart_Light "Dart [(%d)]" <light> (Global)
@@ -25,3 +25,6 @@ Switch H_Dart_green "Dart grün" <light> (gDart_Light,Hall,gAll,gLights) {channe
 Switch H_Dart_blue "Dart blau" <light> (gDart_Light,Hall,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:dart_blue"}
 
 Switch H_DJ_power "DJ-Pult" (gAll,gRecPower) {channel="mqtt:topic:mosquitto:gw2:h_dj_power"}
+Switch L_heater_switch1 "Heizung Sitzecke" <radiator> (gIrHeater) { channel="mqtt:topic:mosquitto:gw2:l_heater_switch1"}
+Switch L_heater_switch2 "Heizung Tür" <radiator> (gIrHeater) { channel="mqtt:topic:mosquitto:gw2:l_heater_switch2"}
+
