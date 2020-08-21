@@ -2,6 +2,8 @@ Group Lounge (Global)
 Group Hall (Global)
 Group Temperature (Global)
 Group Humidity (Global)
+Group Power (Global)
+Group Energy (Global)
 Group Global
 Group Data (Global)
 Group Lights (Global)
@@ -27,4 +29,12 @@ Switch H_Dart_blue "Dart blau" <light> (gDart_Light,Hall,gAll,gLights) {channel=
 Switch H_DJ_power "DJ-Pult" (gAll,gRecPower) {channel="mqtt:topic:mosquitto:gw2:h_dj_power"}
 Switch L_heater_switch1 "Heizung Sitzecke" <radiator> (gIrHeater) { channel="mqtt:topic:mosquitto:gw2:l_heater_switch1"}
 Switch L_heater_switch2 "Heizung Tür" <radiator> (gIrHeater) { channel="mqtt:topic:mosquitto:gw2:l_heater_switch2"}
+
+Switch  L_light "Licht" <light> (Lounge,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:l_light"}
+Number  L_light_power "Lounch Licht Leistung [%.1f W]" (Lounge,Data,Power) {channel="mqtt:topic:mosquitto:gw2:l_light_power"}
+Number  L_light_energy "Lounch Licht Verbrauch [%.1f Ws]" (Lounge,Data,Energy) {channel="mqtt:topic:mosquitto:gw2:l_light_energy"}
+Switch  L_billard "Billard" <light> (Lounge,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:l_billard"}
+Number  L_billard_power "Lounch Billard Leistung [%.1f W]" (Lounge,Data,Power) {channel="mqtt:topic:mosquitto:gw2:l_billard_power"}
+Number  L_billard_energy "Lounch Billard Verbrauch [%.1f Ws]" (Lounge,Data,Energy) {channel="mqtt:topic:mosquitto:gw2:l_billard_energy"}
+
 

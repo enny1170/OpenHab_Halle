@@ -34,10 +34,8 @@ sitemap halle label="Scheune"
 
 	Frame label="Lounge"
 	{
-		Text item=L_temperature
-		Text item=L_humidity
-		Text item=H_H_temperature
-		Text item=H_H_humidity
+		Switch item=L_light
+		Switch item=L_billard
 		Switch item=L_Heater
 		Setpoint item=L_TempSetpoint minValue=16 maxValue=28 step=0.5
 		Text item=IrHeater label="Heizkörper" icon=radiator
@@ -45,12 +43,20 @@ sitemap halle label="Scheune"
 			Switch item=L_heater_switch1 
 			Switch item=L_heater_switch2 
 		}
+		Text item=L_temperature
+		Text item=L_humidity
+		Text item=H_H_temperature
+		Text item=H_H_humidity
+		Text item=L_light_power
+		Text item=L_light_energy
+		Text item=L_billard_power
+		Text item=L_billard_energy
 		Text label="Verlauf"
 		{
 			Chart item=L_temperature refresh=300 period=d legend=true
 			Chart item=L_humidity refresh=300 period=d legend=true
+			Chart item=Power refresh=300 period=w legend=true
 		}
-		
 	}
 		Frame label="Halle"{
 			Switch item=H_arduino_switch
