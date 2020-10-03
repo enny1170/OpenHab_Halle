@@ -1,0 +1,8 @@
+Bridge milight:bridgeV6:F0FE6BC274B0 [ host="192.168.178.251", bridgeid="F0FE6BC274B0" ] {
+    Thing rgbwwLed 4
+    Thing rgbwwLed 3
+    Thing rgbwwLed 2
+    Thing rgbwwLed 1
+    Thing rgbwwLed 0
+    Thing rgbiboxLed 4
+}

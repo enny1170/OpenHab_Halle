@@ -1,5 +1,10 @@
 sitemap test label="test"
 {
+	Frame label="Milight"
+	{
+		Group item=milight
+	}
+
 	Frame label="Halle"
 	{
 		Group item=Y_Main_Zone_G label="Receiver Main"

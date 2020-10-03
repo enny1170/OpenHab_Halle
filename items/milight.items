@@ -1,0 +1,28 @@
+Group milight
+Switch Milight_All_Night (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:0:lednightmode"} 
+Switch Milight_All_White (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:0:ledwhitemode"} 
+Dimmer Milight_All_ColorTemp (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:0:ledtemperature"} 
+Dimmer Milight_All_Brightness (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:0:ledbrightness"} 
+Color Milight_All_Color (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:0:ledcolor"} 
+Dimmer Milight_All_AnimSpeed (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:0:animation_speed", autoupdate="false"} 
+Dimmer Milight_All_AnimMode (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:0:animation_mode_relative", autoupdate="false"} 
+Switch Milight_Link_1 (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:1:ledlink"} 
+Switch Milight_Link_2 (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:2:ledlink"} 
+Switch Milight_Link_3 (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:3:ledlink"} 
+Switch Milight_Link_4 (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:4:ledlink"} 
+
+Dimmer Milight_1_ColorTemp (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:1:ledtemperature"} 
+Dimmer Milight_1_Brightness (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:1:ledbrightness"} 
+Color Milight_1_Color (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:1:ledcolor"} 
+Dimmer Milight_2_ColorTemp (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:2:ledtemperature"} 
+Dimmer Milight_2_Brightness (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:2:ledbrightness"} 
+Color Milight_2_Color (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:2:ledcolor"} 
+Dimmer Milight_3_ColorTemp (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:3:ledtemperature"} 
+Dimmer Milight_3_Brightness (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:3:ledbrightness"} 
+Color Milight_3_Color (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:3:ledcolor"} 
+Dimmer Milight_4_ColorTemp (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:4:ledtemperature"} 
+Dimmer Milight_4_Brightness (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:4:ledbrightness"} 
+Color Milight_4_Color (milight) {channel="milight:rgbwwLed:F0FE6BC274B0:4:ledcolor"} 
+
+Switch Milight_All_OnOff (milight,gAll,gLights) {channel="milight:rgbwwLed:F0FE6BC274B0:0:ledbrightness"}
+

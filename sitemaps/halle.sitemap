@@ -21,6 +21,13 @@ sitemap halle label="Scheune"
 			Text   item=Yamaha_Playback_Song
 			Image  item=Yamaha_Playback_Song_Image visibility=[Yamaha_Input=="Spotify", Yamaha_Input=="NET RADIO", Yamaha_Input=="Bluetooth"]		
 		}
+		Text label="MiLight" icon=light
+		{
+			Default item=Milight_All_Color label="All"
+			Switch item=Milight_All_OnOff label="All" mappings=[ON='On',OFF='Off']
+			Switch item=Milight_All_AnimSpeed label="Animation Speed" mappings=[DECREASE='-', INCREASE='+'] 
+			Switch item=Milight_All_AnimMode label="Animation Mode" mappings=[DECREASE='-', INCREASE='+'] 
+		}
 		Text label="Data" icon=line
 		{
 			Text item=H_H_temperature

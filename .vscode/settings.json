@@ -1,4 +1,4 @@
 {
-    "openhab.host": "schoeningen.ddns.net",
-    "openhab.useRestApi": false
+    "openhab.host": "192.168.178.250",
+    "openhab.useRestApi": true
 }
