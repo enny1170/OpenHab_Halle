@@ -6,6 +6,7 @@ sitemap halle label="Scheune"
 		Switch item=gLights 
 		Switch item=gRecPower label="Receiver"
 		Switch item=L_Heater
+		Switch item=gHall_Light label="Halle Beleuchtung"
 		Text label="Receiver" icon=mediacontrol
 		{
 			Switch item=Yamaha_Power
@@ -66,6 +67,8 @@ sitemap halle label="Scheune"
 		}
 	}
 		Frame label="Halle"{
+			Switch item=H_light_front
+			Switch item=H_light_back
 			Switch item=H_arduino_switch
 			Switch item=H_dmx_switch
 			Switch item=H_revo_switch
@@ -83,6 +86,10 @@ sitemap halle label="Scheune"
 				Chart item=H_H_temperature refresh=300 period=d legend=true
 				Chart item=H_H_humidity refresh=300 period=d legend=true
 			}			
+			Text item=H_light_back_power
+			Text item=H_light_back_energy
+			Text item=H_light_front_power
+			Text item=H_light_front_energy
 		}	
 
 }

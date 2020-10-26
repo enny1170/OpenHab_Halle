@@ -24,6 +24,13 @@ Bridge mqtt:broker:mosquitto "Misquitto" [host="127.0.0.1",secure=false, clientI
 		Type switch : l_billard "Billard" [stateTopic="shellies/shellylounch1/relay/1", on="on", off="off", commandTopic="shellies/shellylounch1/relay/1/command", on="on", off="off"]
 		Type number : l_billard_power "Billard Leistung" [stateTopic="shellies/shellylounch1/relay/1/power"]
 		Type number : l_billard_energy "Billard Verbrauch" [stateTopic="shellies/shellylounch1/relay/1/energy"]
+
+		Type switch : h_light_back "Hinten" [stateTopic="shellies/shellyhalle1/relay/0", on="on", off="off", commandTopic="shellies/shellyhalle1/relay/0/command",on="on", off="off"]
+		Type number : h_light_back_power "Hinten Leistung" [stateTopic="shellies/shellyhalle1/relay/0/power"]
+		Type number : h_light_back_energy "Hinten Verbrauch" [stateTopic="shellies/shellyhalle1/relay/0/energy"]
+		Type switch : h_light_front "Vorne" [stateTopic="shellies/shellyhalle1/relay/1", on="on", off="off", commandTopic="shellies/shellyhalle1/relay/1/command", on="on", off="off"]
+		Type number : h_light_front_power "Vorne Leistung" [stateTopic="shellies/shellyhalle1/relay/1/power"]
+		Type number : h_light_front_energy "Vorne Verbrauch" [stateTopic="shellies/shellyhalle1/relay/1/energy"]
 	}
 	
 }

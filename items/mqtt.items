@@ -13,6 +13,7 @@ Group:Switch:OR(ON,OFF) gAll "Alles [(%d)]" (Global)
 Group:Switch:OR(ON,OFF) gLights "Licht [(%d)]" <light> (Global)
 Group:Switch:OR(ON,OFF) gDart_Light "Dart [(%d)]" <light> (Global)
 Group:Switch:OR(ON,OFF) gRecPower "Receiver [(%d)]" (Global)
+Group:Switch:OR(ON,OFF) gHall_Light "Halle [(%d)]" (Global)
 Number L_humidity "Luftfeuchte Lounge [%.1f %%]" <humidity> (Lounge,Humidity,Data) {channel="mqtt:topic:mosquitto:gw2:l_humidity"} 
 Number L_temperature "Temperatur Lounge [%.1f °C]" <temperature> (Lounge,Temperature,Data) {channel="mqtt:topic:mosquitto:gw2:l_temperature"} 
 Number L_lightlevel "Helligkeit [%.1f %%]" <lightlevel> (Lounge){channel="mqtt:topic:mosquitto:gw2:l_lightlevel"} 
@@ -37,4 +38,10 @@ Switch  L_billard "Billard" <light> (Lounge,gAll,gLights) {channel="mqtt:topic:m
 Number  L_billard_power "Lounch Billard Leistung [%.1f W]" (Lounge,Data,Power) {channel="mqtt:topic:mosquitto:gw2:l_billard_power"}
 Number  L_billard_energy "Lounch Billard Verbrauch [%.1f Ws]" (Lounge,Data,Energy) {channel="mqtt:topic:mosquitto:gw2:l_billard_energy"}
 
+Switch  H_light_back "Hinten" <light> (Hall,gHall_Light,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:h_light_back"}
+Number  H_light_back_power "Hinten Licht Leistung [%.1f W]" (Hall,Data,Power) {channel="mqtt:topic:mosquitto:gw2:h_light_back_power"}
+Number  H_light_back_energy "Hinten Licht Verbrauch [%.1f Ws]" (Hall,Data,Energy) {channel="mqtt:topic:mosquitto:gw2:h_light_back_energy"}
+Switch  H_light_front "Vorne" <light> (Hall,gHall_Light,gAll,gLights) {channel="mqtt:topic:mosquitto:gw2:h_light_front"}
+Number  H_light_front_power "Vorne Leistung [%.1f W]" (Hall,Data,Power) {channel="mqtt:topic:mosquitto:gw2:h_light_front_power"}
+Number  H_light_front_energy "Vorne Billard Verbrauch [%.1f Ws]" (Hall,Data,Energy) {channel="mqtt:topic:mosquitto:gw2:h_light_front_energy"}
 
